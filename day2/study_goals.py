@@ -2,11 +2,14 @@ metas = []
 
 
 def mostrar_menu():
-    print("\n=== SISTEMA DE METAS ===")
-    print("1. Agregar meta")
-    print("2. Ver metas")
-    print("3. eliminar meta")
-    print("4. Salir")
+    print("""=== SISTEMA DE METAS ===)
+    
+                1. Agregar meta
+                2. Ver metas
+                3. eliminar meta
+                4. contar metas
+                5. salir
+                """)
 
 
 while True:
@@ -51,7 +54,19 @@ while True:
 
             print("Esa meta no existe.")
 
+
     elif opcion == "4":
+        print("=== CONTADOR DE METAS ===")
+
+        if len(metas) == 0:
+            print("No tienes metas registradas.")
+
+        else:
+            total = len(metas)
+            print(f"tienes - {total} metas registradas.")
+
+
+    elif opcion == "5":
 
         print("Saliendo del sistema...")
         break
